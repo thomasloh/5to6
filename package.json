@@ -1,0 +1,39 @@
+{
+  "name": "5to6",
+  "version": "0.0.1",
+  "description": "Convert (partial) ES5 to ES6",
+  "main": "src/index.js",
+  "bin": {
+    "5to6": "./bin/5to6.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thomasloh/5to6.git"
+  },
+  "keywords": [
+    "5to6",
+    "es5",
+    "es6",
+    "convert",
+    "babel",
+    "javascript",
+    "recast"
+  ],
+  "author": "thomasloh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasloh/5to6/issues"
+  },
+  "homepage": "https://github.com/thomasloh/5to6",
+  "dependencies": {
+    "bluebird": "^2.9.13",
+    "colors": "^1.0.3",
+    "commander": "^2.6.0",
+    "glob": "^4.4.1",
+    "lodash": "^3.3.1",
+    "recast": "^0.10.1"
+  }
+}
