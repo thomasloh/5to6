@@ -59,9 +59,13 @@ sudo npm install 5to6 -g
 
 # Usage
 
-5to6 -s src // converts all js or jsx files in "src" folder (relative to current directory)
+```
+5to6 -s src    # converts all js or jsx files in "src" folder (relative to current directory)
 
-5to6 -s src -v // verbose mode
+5to6 -s .      # converts all js or jsx files current directory
+
+5to6 -s . -v   # verbose mode
+```
 
 # Caveats
 
