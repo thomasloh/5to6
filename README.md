@@ -55,7 +55,9 @@ import Foo, {Bar, Baz} from 'foo'
 
 # Install
 
+```
 sudo npm install 5to6 -g
+```
 
 # Usage
 
