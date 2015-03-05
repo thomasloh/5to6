@@ -25,13 +25,13 @@ module.exports = function convertModuleDotExportToExportDefault(body) {
       assert(o.expression.left.object.name === "module", "Must be 'module' name");
       n.Identifier.assert(o.expression.left.property);
       assert(o.expression.left.property.name === "exports", "Must be 'exports' name");
-      n.Identifier.assert(o.expression.right);
+      // n.Identifier.assert(o.expression.right);
     } catch(e) {
       return o;
     }
 
-    var Module = o.expression.right.name;
-    o = b.exportDeclaration(true, b.identifier(Module));
+    // var Module = o.expression.right.name;
+    o = b.exportDeclaration(true, o.expression.right);
 
     return o;
 

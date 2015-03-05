@@ -31,8 +31,6 @@ function convert(pattern, opts) {
   }
 
   var files = glob.sync(p);
-  // var converted = [];
-  // var notConverted = [];
 
   if (!files) {
     if (verbose) {
@@ -76,32 +74,13 @@ function convert(pattern, opts) {
 
     })
     .catch(function(e) {
+      console.log(e.stack)
       if (verbose) {
         console.log((file + " is not converted because it's not tracked by git.").red);
       }
     });
 
-  }))
-  .then(function() {
-
-    // Output
-    // if (converted.length) {
-    //   console.log([
-    //     "The following files are converted:",
-    //       converted.map(function(s) {return "  " + s}).join(',\n'),
-    //     ""
-    //   ].join('\n').green);
-    // }
-
-    // if (notConverted.length) {
-    //   console.log([
-    //     "The following files are not converted because they are not tracked by git:",
-    //       notConverted.map(function(s) {return "  " + s}).join(',\n'),
-    //     ""
-    //   ].join('\n').red);
-    // }
-
-  })
+  }));
 
 }
 

@@ -6,18 +6,18 @@ var colors = require('colors');
 
 var program = new commander.Command('5to6');
 
-program.option("-s, --sources <type>", "Sources to convert from ES5 to ES6 i.e. 5to6 -s src/js");
+program.option("-s, --source <type>", "Source to convert from ES5 to ES6 i.e. 5to6 -s src/js");
 program.option("-v, --verbose", "Verbose mode");
 
 var pkg = require("../package.json");
 program.version(pkg.version);
 program.parse(process.argv);
 
-// Verify sources
-var sources = program.sources;
+// Verify source
+var source = program.source;
 var verbose = program.verbose;
 
-if (!sources) {
+if (!source) {
   return program.help();
 }
 
@@ -41,7 +41,7 @@ function verifyGit(error, stdout, stderr) {
       return console.warn("git working copy must be clean, otherwise doing `git revert` later (if any) will revert previously changed files as well, so please commit your changed files first...".red);
     }
 
-    main(sources, {verbose: verbose});
+    main(source, {verbose: verbose});
 
   }
 
