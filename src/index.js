@@ -74,7 +74,6 @@ function convert(pattern, opts) {
 
     })
     .catch(function(e) {
-      console.log(e.stack)
       if (verbose) {
         console.log((file + " is not converted because it's not tracked by git.").red);
       }
