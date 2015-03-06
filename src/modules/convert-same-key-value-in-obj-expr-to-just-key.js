@@ -45,6 +45,11 @@ module.exports = function convertSameKeyValueInObjExprToJustKey(body) {
       return o;
     }
 
+    if (o.value && o.value.type === "ObjectExpression") {
+      o.value.properties = convertSameKeyValueInObjExprToJustKey(o.value.properties);
+      return o;
+    }
+
     try {
       n.Property.assert(o);
       n.Identifier.assert(o.key);
