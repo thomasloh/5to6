@@ -1,4 +1,4 @@
-# Note: Extremely experimental
+# Note: Experimental
 
 5to6
 ========================
@@ -71,7 +71,7 @@ sudo npm install 5to6 -g
 
 # Caveats
 
-This lib was initially created to convert a project codebase to ES6, so it assumes certain code structure. If your codebase is using the commonjs style modules structure, it should work. Codebase with everything in one big closure will not work. Again, this lib is extremely experimental.
+This lib was initially created to convert a project codebase to ES6, so it assumes certain code structure. If your codebase is using the commonjs style modules structure, it should work. Codebase with everything in one big closure will not work. Again, this lib is experimental.
 
 5to6 directly writes to file after conversion. So it depends on git, not for conversion, but for reversion in case output is not as expected etc.
 
