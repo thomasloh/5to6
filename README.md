@@ -3,6 +3,8 @@
 5to6
 ========================
 
+[Motivation](https://medium.com/@thomas_loh/es5-es6-e55e9bf59819)
+
 Converts (partial) ES5 code to ES6. Converted files are expected to be used with  ES6 transpilers like Babel.
 
 Uses [recast](https://github.com/benjamn/recast) to get code's AST and detect then modify certain syntax to the equivalent in ES6. Semantics don't change, only the syntax.
