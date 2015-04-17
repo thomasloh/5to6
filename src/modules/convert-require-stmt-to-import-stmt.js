@@ -3,7 +3,7 @@ var recast = require('recast');
 var _      = require('lodash');
 var n      = recast.types.namedTypes;
 var b      = recast.types.builders;
-var Set    = require('Set');
+var Set    = require('set');
 
 /////////////////////////////////////////////////////
 // Convert require statements to import statements //
