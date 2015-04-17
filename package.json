@@ -1,6 +1,6 @@
 {
   "name": "5to6",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert (partial) ES5 to ES6",
   "main": "src/index.js",
   "bin": {
